@@ -1,0 +1,14 @@
+{
+    "routes": [
+      {
+        "route": "/page1/*",
+        "serve": "/site1/index.html",
+        "statusCode": 200
+      },
+      {
+        "route": "/page2/*",
+        "serve": "/site2/indexotherpage.html",
+        "statusCode": 200
+      }
+    ]
+  }

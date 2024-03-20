@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Palmas BI</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #90EE90; /* Fondo celeste */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        table {
+            margin-top: -20%;
+            border-collapse: collapse;
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff; /* Fondo blanco */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+            border-radius: 10px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd; /* Borde inferior */
+        }
+
+        th {
+            background-color: #f2f2f2; /* Fondo gris claro para encabezados */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Tipo Reporte </th>
+                    <th>Nombre Reporte 2</th>
+                    <th>Area 2</th>
+                    <!-- Agrega más encabezados según sea necesario -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los datos se cargarán aquí dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Función para cargar los datos desde la API y llenar la tabla
+        function loadDataFromAPI(apiUrl) {
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const tableBody = document.querySelector('#data-table tbody');
+                    // Limpiar el cuerpo de la tabla
+                    tableBody.innerHTML = '';
+
+                    // Iterar sobre los datos y crear filas para la tabla
+                    data.forEach(item => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${item.Tipo_OpEst}</td>
+                            <td>${item.NombreReporte}</td>
+                            <td>${item.Area}</td>
+                            <!-- Agrega más celdas según sea necesario -->
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error al cargar datos desde la API:', error);
+                });
+        }
+
+        // Llamar a la función para cargar datos cuando se cargue la página
+        document.addEventListener('DOMContentLoaded', function () {
+            // URL de la API
+            const apiUrl = 'http://localhost:8080/api/SabanaReportes'; // Reemplaza 'URL_DE_TU_API' con la URL real de tu API
+            loadDataFromAPI(apiUrl);
+        });
+    </script>
+</body>
+
+</html>
