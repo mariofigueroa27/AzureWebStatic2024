@@ -1,6 +1,7 @@
 {
   "routes": [
     { "route": "/Page1", "serve": "/indexPri.html" },
-    { "route": "/Page2", "serve": "/pruebaotherpage.html" }
+    { "route": "/Page2", "serve": "/pruebaotherpage.html" },
+    { "route": "/", "serve": "/pruebaotherpage.html" }
   ]
 }
