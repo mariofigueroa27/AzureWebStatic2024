@@ -1,6 +1,0 @@
-{
-    "routes": [
-      { "route": "/page1", "serve": "/indexPri.html" },
-      { "route": "/page2", "serve": "/indexotherpage.html" }
-    ]
-  }
