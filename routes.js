@@ -12,6 +12,5 @@ const routes = {
 
 
 
-window.onpopstate = handleLocation;
 window.route = route;
 
