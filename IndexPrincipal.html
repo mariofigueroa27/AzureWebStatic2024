@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Palmas BI</title>
+    <style>
+      body {
+        background-color: #add8e6; /* Cambiar el color de fondo a celeste claro */
+        margin: 0;
+        padding: 0;
+        font-family: "GothamBold", sans-serif; /* Usar la fuente GothamBook */
+      }
+
+      #center-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .button {
+        padding: 15px 30px;
+        background-color: #fff; /* Cambiar el color de fondo del botón */
+        border: 2px solid #000; /* Añadir borde negro */
+        border-radius: 20px; /* Añadir borde redondeado */
+        font-size: 24px;
+        text-transform: uppercase; /* Convertir el texto a mayúsculas */
+        cursor: pointer;
+        transition: all 0.3s ease; /* Agregar transición para el hover */
+        text-decoration: none;
+        color: inherit;
+        margin-top: 20px; /* Añadir margen superior */
+      }
+
+      .button:hover {
+        background-color: #000; /* Cambiar el color de fondo en hover */
+        color: #fff; /* Cambiar el color del texto en hover */
+      }
+
+      .orange-button {
+        background-color: #ffd700; /* Cambiar el color de fondo a naranja claro */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="center-container">
+      <!-- Primer botón -->
+      <a
+        class="button"
+        href="https://black-river-0eee0a010.4.azurestaticapps.net/Page1/index.html"
+        >Ingresar Index 1</a
+      >
+      <!-- Segundo botón con clase adicional para cambiar el color -->
+      <a
+        class="button orange-button"
+        href="https://black-river-0eee0a010.4.azurestaticapps.net/Page2/indexotherpage.html"
+        >Ingresar Index 2</a
+      >
+    </div>
+  </body>
+</html>
