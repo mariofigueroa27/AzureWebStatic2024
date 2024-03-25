@@ -7,8 +7,8 @@ const route = (event) => {
 
 const routes = {
     "/": "/index.html",
-    "/pages1": "/Page1/index1.html",
-    "/pages2": "/Page2/indexotherpage.html",
+    "/pages1": "https://black-river-0eee0a010.4.azurestaticapps.net/Page1/index1.html",
+    "/pages2": "https://black-river-0eee0a010.4.azurestaticapps.net/Page2/indexotherpage.html",
 };
 
 const handleLocation = async () => {
